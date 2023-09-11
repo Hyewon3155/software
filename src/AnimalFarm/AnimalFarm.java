@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalFarm {
-    private List<Animal> animals;
-
-    public AnimalFarm() {
-        animals = new ArrayList<>();
-    }
+    private List<Animal> animals = new ArrayList<>();
 
     public void addAnimal(Animal animal) {
         animals.add(animal);
@@ -16,7 +12,7 @@ public class AnimalFarm {
 
     public Animal findAnimalByName(String name) {
         for (Animal animal : animals) {
-            if (animal.getName().equalsIgnoreCase(name)) {
+            if (animal.getName().equals(name)) {
                 return animal;
             }
         }
